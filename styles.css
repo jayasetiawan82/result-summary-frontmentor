@@ -1,0 +1,263 @@
+:root {
+    --clr-primary-lightred:hsl(0, 100%, 67%);
+    --clr-primary-orangeyyellow: hsl(39, 100%, 56%);
+    --clr-pimary-greenteal:hsl(166, 100%, 37%);
+    --clr-primary-cobaltblue: hsl(234, 85%, 45%);
+
+    --clr-gradients-slateblue-background:hsl(252, 100%, 67%);
+    --clr-gradients-royalblue-background: hsl(241, 81%, 54%);
+    --clr-gradients-violetblue-circle:hsla(256, 72%, 46%, 1);
+    --clr-gradients-persianblue-circle: hsla(241, 72%, 46%, 0);
+
+    --clr-neutral-white:hsl(0, 0%, 100%);
+    --clr-neutral-paleblue: hsl(221, 100%, 96%);
+    --clr-neutral-lightlavender: hsl(241, 100%, 89%);
+    --clr-neutral-grayblue: hsl(224, 30%, 27%);  
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-balck: 800;
+    
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.75rem;
+    --fs-700: 2rem;
+    --fs-900: 5rem;
+
+}
+
+
+/* Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`. */
+/* Mobile: 375px
+- Desktop: 1440px */
+
+/* General Styling  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    font-size: var(--fs-400);
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 610px;
+    margin: 0 auto;
+    display: grid;
+    box-shadow: .5rem 1rem 3rem 
+    hsl(224, 30%, 27%, .2);
+    border-radius: 2rem;
+    overflow: hidden;
+
+}
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 610px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: .5rem 1rem 3rem 
+        hsl(224, 30%, 27%, .2);
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+}
+
+.main-result {
+    display: grid;
+    place-content: center;
+    width: 12rem;
+    margin-inline: auto;
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+
+}
+
+
+span {
+    color: hsl(223, 51%, 84%);
+}
+
+img {
+    float: left;
+    padding-right: 10px;
+    padding-top: 2px;
+
+    
+}
+
+/* Reuslt section */
+
+.wrapper-result {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 19px;
+    text-align: center;
+    
+    padding: 30px;
+}
+
+.your-result{
+    color: var(--clr-neutral-paleblue);
+    padding: 16px 0;
+    
+}
+
+.main-result {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--clr-neutral-white);
+}
+
+.second-result {
+    color: hsl(221, 100%, 96%);
+}
+
+.grade {
+    color: var(--clr-neutral-white);
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+.main-paragraph {
+    color: var(--clr-neutral-paleblue);
+    font-weight: 10
+}
+
+/* summary section */
+
+.wrapper-summary {
+    color: var(--clr-neutral-white);
+    border-radius: 19px;    
+    padding: 30px;
+    background-color: var(--clr-neutral-white);
+}
+
+.summary-heading {
+    color: hsl(224, 30%, 27%, 0.8); 
+    padding: 16px 0;
+}
+
+/* reaction row */
+
+.summary-list {
+    display: grid;
+    gap: 10px;
+}
+
+.reaction-list {
+    background-color: hsl(0, 100%, 67%, 5%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.reaction-item {
+    color: hsla(0, 89%, 39%, 0.4)
+}
+
+.reaction-result {
+    color: hsl(224, 30%, 27%, 0.8); 
+    text-align: right;
+}
+
+/* memory row */
+
+.memory-list {
+    background-color: hsl(39, 100%, 56%, 5%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.memory-item {
+    color: hsla(39, 85%, 33%, 0.5);
+}
+
+.memory-result {
+    color: hsl(224, 30%, 27%, 0.8); 
+    text-align: right;
+}
+
+
+/* verbal row */
+
+.verbal-list {
+    background-color: hsl(166, 100%, 37%, 5%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.verbal-item {
+    color: hsla(166, 84%, 31%, 0.5);
+}
+
+.verbal-result {
+    color: hsl(224, 30%, 27%, 0.8); 
+    text-align: right;
+}
+
+
+
+/* visal row */
+
+.visual-list {
+    background-color: hsla(234, 98%, 51%, 0.05);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.visual-item {
+    color: hsla(234, 95%, 41%, 0.664);
+}
+
+.visual-result {
+    color: hsl(224, 30%, 27%, 0.8); 
+    text-align: right;
+}
+
+
+
+/* add up */
+
+/* [data-spacing="large"] {
+gap: 2rem;
+} */
+
+
+button {
+    width: 100%;
+    margin-top: 40px;
+    color: var(--clr-neutral-paleblue);
+    background-color: var(--clr-neutral-grayblue);
+    text-decoration: none;
+    border: 0;
+    padding: 0.8em;
+    border-radius: 25px;
+    font-weight: 800;
+    cursor: pointer;
+
+
+}
+
+
+
+
+
